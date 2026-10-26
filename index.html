@@ -236,6 +236,17 @@ section.s.light strong{color:var(--ink)}
 .act.photo img{width:100%;height:100%;object-fit:cover;grid-area:1/1}
 .act.photo .ov{grid-area:1/1;align-self:end;padding:26px;background:linear-gradient(180deg,transparent,rgba(10,9,8,.92) 55%)}
 
+/* brindes 4 */
+.gifts{display:grid;gap:14px}
+@media (min-width:760px){.gifts{grid-template-columns:1fr 1fr}}
+.gcard{position:relative;background:var(--bg-3);border:1px solid var(--line-2);border-top:3px solid var(--red-hot);border-radius:8px;padding:28px 26px 26px 26px;overflow:hidden}
+.gcard .gn{position:absolute;right:18px;top:6px;font-family:var(--display);font-size:72px;line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(214,48,48,.45)}
+.gcard h4{font-family:var(--display);font-weight:400;text-transform:uppercase;font-size:clamp(24px,2.6vw,30px);line-height:1.05;margin:0 70px 12px 0}
+.gcard h4 em{font-style:normal;color:var(--kraft)}
+.gcard p{font-size:15.5px;color:var(--txt-2);max-width:46ch}
+.acts.one{grid-template-columns:1fr}
+.acts.one dl{grid-template-columns:1fr}
+@media (min-width:860px){.acts.one dl{grid-template-columns:1fr 1fr;column-gap:40px}}
 /* pacote */
 .pack{background:var(--red);position:relative;overflow:hidden}
 .pack::before{content:"OGRO";position:absolute;right:-2%;bottom:-12%;font-family:var(--display);font-size:clamp(200px,34vw,460px);line-height:1;color:rgba(0,0,0,.1);pointer-events:none}
@@ -477,7 +488,7 @@ footer{border-top:1px solid var(--line-2);padding:28px 0 36px;font-size:11.5px;l
         <span class="tag">Área VIP · degustação</span>
         <h3>Servir quem tem audiência</h3>
         <div class="big">180</div><div class="bigl">burgers · das 16h30 às 22h</div>
-        <ul><li>Formato a definir: inteiro ou meia porção, para provar sem pesar</li><li>Sem cozinha no local: operação compacta, com o mínimo de preparo na hora</li><li>Reposição de hora em hora, como fizemos na Copa Rio</li></ul>
+        <ul><li>Formato a definir: inteiro ou meia porção, para provar sem pesar</li><li>Burgers chegam prontos, sem preparo no local</li><li>Reposição de hora em hora, como fizemos na Copa Rio</li></ul>
       </div>
       <div class="op red rv">
         <span class="tag">Village · venda</span>
@@ -491,7 +502,7 @@ footer{border-top:1px solid var(--line-2);padding:28px 0 36px;font-size:11.5px;l
       <h4>A Effect pediu da Ogro</h4>
       <div class="pills"><span>Energia elétrica</span><span>Ponto de água</span><span>Mobiliário</span><span>Refrigeração</span><span>Equipamentos</span><span>Tamanho da equipe</span></div>
     </div>
-    <p class="hand rv">Burger parado seis horas não fica bom. O segredo é finalizar perto e repor sempre.</p>
+    <p class="hand rv">Burger chega pronto e a reposição é de hora em hora, pra VIP comer bem até o fim.</p>
   </div>
 </section>
 
@@ -505,31 +516,11 @@ footer{border-top:1px solid var(--line-2);padding:28px 0 36px;font-size:11.5px;l
       <p class="lead">Brinde bom é o que faz a pessoa pedir Ogro depois. Por isso, quase tudo carrega um cupom.</p>
     </div>
 
-    <div class="gift rv">
-      <div class="gh"><span class="ey">Kit atleta</span><h3>Para os 5 mil corredores</h3><p>Leve, barato e do tamanho do kit. Quantidade e formato a confirmar com a Effect.</p></div>
-      <div class="opts">
-        <div class="opt pick"><span class="on">01</span><span class="badge">Nossa escolha</span><h4>Cartão com cupom</h4><p>Cartão da Ogro com cupom para o primeiro pedido depois da prova.</p><span class="why">O mais barato e o único que mede retorno</span></div>
-        <div class="opt"><span class="on">02</span><h4>Adesivo com cupom no verso</h4><p>Adesivo da marca para garrafa ou notebook.</p><span class="why">Fica mais tempo com a pessoa que um flyer</span></div>
-        <div class="opt"><span class="on">03</span><h4>Mimo comestível</h4><p>Item pequeno e embalado, sem preparo.</p><span class="why">Lembrança gostosa, depende de liberação sanitária</span></div>
-      </div>
-    </div>
-
-    <div class="gift rv">
-      <div class="gh"><span class="ey">Kit premiação</span><h3>Para quem sobe no pódio</h3><p>Pouca gente, prêmio grande. É aqui que o exagero da Ogro aparece.</p></div>
-      <div class="opts">
-        <div class="opt pick"><span class="on">01</span><span class="badge">Nossa escolha</span><h4>Um mês de Ogro</h4><p>4 pedidos do burger favorito, entregues em casa.</p><span class="why">Mesma mecânica do professor mais fiel de outubro</span></div>
-        <div class="opt"><span class="on">02</span><h4>Ogro em dobro</h4><p>Vale de combo família para dividir com quem torceu.</p><span class="why">Leva a marca para a mesa de casa</span></div>
-        <div class="opt"><span class="on">03</span><h4>Peça assinada pelo Jimmy</h4><p>Avental ou boné com autógrafo.</p><span class="why">Exclusivo e vira conteúdo</span></div>
-      </div>
-    </div>
-
-    <div class="gift rv">
-      <div class="gh"><span class="ey">Área VIP</span><h3>Para quem tem audiência</h3><p>Influenciadores, imprensa e parceiros. Tudo pensado para ser fotografado.</p></div>
-      <div class="opts">
-        <div class="opt pick"><span class="on">01</span><span class="badge">Nossa escolha</span><h4>Embalagem da edição</h4><p>Burger servido em embalagem especial do evento.</p><span class="why">A foto do burger já sai com a marca</span></div>
-        <div class="opt"><span class="on">02</span><h4>Cartão VIP</h4><p>Cupom forte para o primeiro pedido em casa.</p><span class="why">Leva o convidado do evento pro delivery</span></div>
-        <div class="opt"><span class="on">03</span><h4>Boné ou copo da Ogro</h4><p>Para quem postar no stories.</p><span class="why">Mídia espontânea com a marca no rosto</span></div>
-      </div>
+    <div class="gifts">
+      <div class="gcard rv"><span class="gn">01</span><h4>Cartão personalizado <em>“Fome de campeão”</em></h4><p>Cartão da Ogro com cupom para o pós-prova.</p></div>
+      <div class="gcard rv"><span class="gn">02</span><h4>Adesivo da Ogro</h4><p>Com cupom no verso. Vai pra garrafa ou pro notebook.</p></div>
+      <div class="gcard rv"><span class="gn">03</span><h4>Vale <em>“Um mês de Ogro”</em></h4><p>Para atletas ou pessoas da mídia especiais: 4 pedidos, no mesmo molde do professor mais fiel de outubro, que já foi testado.</p></div>
+      <div class="gcard rv"><span class="gn">04</span><h4>Avental ou boné assinado pelo Jimmy</h4><p>Exclusivo e vira conteúdo.</p></div>
     </div>
   </div>
 </section>
@@ -543,7 +534,7 @@ footer{border-top:1px solid var(--line-2);padding:28px 0 36px;font-size:11.5px;l
       <h2>Muito além <span class="r">do burger</span></h2>
     </div>
 
-    <div class="acts">
+    <div class="acts one">
       <div class="act rv">
         <div class="where">No food truck</div>
         <dl>
@@ -553,62 +544,16 @@ footer{border-top:1px solid var(--line-2);padding:28px 0 36px;font-size:11.5px;l
           <div><dt>Desafio Ogro</dt><dd>Encarar o burger mais exagerado da casa e levar brinde.</dd></div>
         </dl>
       </div>
-      <div class="act photo rv">
-        <img src="img/sorrindo-na-mesa.jpg" alt="Jimmy Ogro sorrindo à mesa com burgers" loading="lazy">
-        <div class="ov">
-          <div class="where">Na área VIP</div>
-          <dl>
-            <div><dt>Jimmy na chapa</dt><dd>O chef da Ogro finalizando e servindo os convidados.</dd></div>
-            <div><dt>Ogro Responde ao vivo</dt><dd>Convidados e atletas respondendo as perguntas do quadro.</dd></div>
-          </dl>
-        </div>
-      </div>
-      <div class="act star rv">
-        <div class="where">Conteúdo</div>
-        <dl>
-          <div><dt>Igor corre a prova vestido de Ogro</dt><dd>O conteúdo com mais chance de viralizar.</dd></div>
-          <div><dt>Episódio do Já deu por hoje</dt><dd>Corredor no fim da prova, comendo sem culpa.</dd></div>
-          <div><dt>Bastidor do truck</dt><dd>Montagem, fila e chapa à noite.</dd></div>
-          <div><dt>Collab com corredores</dt><dd>Influenciadores de corrida convidados para a VIP.</dd></div>
-        </dl>
-      </div>
-      <div class="act rv">
-        <div class="where">Antes e depois</div>
-        <dl>
-          <div><dt>Sorteio das 4 cortesias</dt><dd>No Instagram: marque quem corre com você.</dd></div>
-          <div><dt>Cupom de inscrição pra base</dt><dd>Os 10% da corrida enviados para os clientes da Ogro.</dd></div>
-          <div><dt>Recuperação by Ogro</dt><dd>Fotos oficiais no pós-evento e um cupom com prazo para pedir em casa.</dd></div>
-        </dl>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- 07 PACOTE -->
-<section class="s pack" id="pacote">
-  <div class="wrap">
-    <div class="sh rv">
-      <span class="n">07</span>
-      <span class="ey">Se fosse pra escolher hoje</span>
-      <h2>O pacote enxuto</h2>
-      <p class="lead">Seis ações que cabem no prazo, medem retorno e têm a cara da Ogro.</p>
-    </div>
-    <ol class="plist">
-      <li class="rv"><span class="pn">01</span><div><b>Cartão com cupom no kit atleta</b><span>Alcance de 5 mil corredores, com retorno medido</span></div></li>
-      <li class="rv"><span class="pn">02</span><div><b>Um mês de Ogro no pódio</b><span>O prêmio exagerado que vira história</span></div></li>
-      <li class="rv"><span class="pn">03</span><div><b>Embalagem da edição na VIP</b><span>Toda foto de convidado sai com a marca</span></div></li>
-      <li class="rv"><span class="pn">04</span><div><b>Mostrou a medalha, ganhou</b><span>Puxa o corredor direto pro truck</span></div></li>
-      <li class="rv"><span class="pn">05</span><div><b>Igor corre vestido de Ogro</b><span>O conteúdo com mais chance de viralizar</span></div></li>
-      <li class="rv"><span class="pn">06</span><div><b>Sorteio das cortesias</b><span>Alcance e seguidores antes do evento</span></div></li>
-    </ol>
-  </div>
-</section>
 
 <!-- 08 PRÓXIMOS PASSOS -->
 <section class="s" id="passos">
   <div class="wrap">
     <div class="sh rv">
-      <span class="n">08</span>
+      <span class="n">07</span>
       <span class="ey">O percurso até a largada</span>
       <h2>19 dias pra <span class="r">fazer acontecer</span></h2>
     </div>
@@ -619,7 +564,7 @@ footer{border-top:1px solid var(--line-2);padding:28px 0 36px;font-size:11.5px;l
       <div class="km rv"><i class="dot"></i><div class="kml">KM 2</div><div class="kmd">30.10 a 07.11</div><h4>Produzir</h4>
         <ul><li>Sabor e formato dos burgers da VIP</li><li>Cardápio, combo e preços do truck</li><li>Brindes escolhidos e na gráfica</li><li>Cupons criados</li><li>Artes do truck, do cupom e de divulgação</li></ul></div>
       <div class="km rv"><i class="dot"></i><div class="kml">KM 3</div><div class="kmd">04 a 13.11</div><h4>Aquecer</h4>
-        <ul><li>Anúncio da parceria no Instagram</li><li>Sorteio das cortesias</li><li>Nomes para as credenciais</li><li>Plano de reposição de hora em hora</li><li>Brindes entregues para os kits</li></ul></div>
+        <ul><li>Anúncio da parceria no Instagram</li><li>Nomes para as credenciais</li><li>Plano de reposição de hora em hora</li><li>Brindes entregues para os kits</li></ul></div>
       <div class="km finish rv"><i class="dot"></i><div class="kml">Chegada</div><div class="kmd">14.11</div><h4>Dia D</h4>
         <ul><li>VIP das 16h30 às 22h</li><li>Truck das 16h às 22h30</li><li>Captação de conteúdo em todo o Village</li></ul></div>
       <div class="km rv"><i class="dot"></i><div class="kml">Pós-prova</div><div class="kmd">até 21.11</div><h4>Colher</h4>
@@ -640,16 +585,15 @@ footer{border-top:1px solid var(--line-2);padding:28px 0 36px;font-size:11.5px;l
 <section class="s light" id="decisoes">
   <div class="wrap">
     <div class="sh rv">
-      <span class="n">09</span>
+      <span class="n">08</span>
       <span class="ey">Para aprovar</span>
-      <h2>Cinco decisões <span class="r">pra destravar</span></h2>
+      <h2>Quatro decisões <span class="r">pra destravar</span></h2>
     </div>
     <div class="dec">
       <div class="d rv"><span class="dn">1</span><p>Seguimos com a <strong>permuta</strong>?</p></div>
-      <div class="d rv"><span class="dn">2</span><p>Quais <strong>brindes e ativações</strong> entram: o pacote enxuto ou outra combinação?</p></div>
-      <div class="d rv"><span class="dn">3</span><p>Qual <strong>burger</strong> vai para a VIP, e em que formato?</p></div>
-      <div class="d rv"><span class="dn">4</span><p>Qual o <strong>cardápio e o combo</strong> do truck, e qual <strong>cupom</strong> vai no kit?</p></div>
-      <div class="d rv"><span class="dn">5</span><p>O <strong>Jimmy</strong> e o <strong>Igor</strong> podem estar no evento?</p></div>
+      <div class="d rv"><span class="dn">2</span><p>Qual <strong>burger</strong> vai para a VIP, e em que formato?</p></div>
+      <div class="d rv"><span class="dn">3</span><p>Qual o <strong>cardápio e o combo</strong> do truck, e qual <strong>cupom</strong> vai no kit?</p></div>
+      <div class="d rv"><span class="dn">4</span><p>O <strong>Jimmy</strong> e o <strong>Igor</strong> podem estar no evento?</p></div>
     </div>
   </div>
 </section>
