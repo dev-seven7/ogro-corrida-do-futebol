@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ogro na Corrida do Futebol · 14.11 · Maracanã</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Oswald:wght@300;400;500;600;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap">
+<style>
+:root{
+  --ground:#B9B9B6;
+  --paper:#CBCBC8;
+  --paper-2:#D6D6D3;
+  --white:#E9E9E6;
+  --ink:#121211;
+  --ink-2:#3D3D3A;
+  --ink-3:#6E6E68;
+  --line:#9C9C97;
+  --line-soft:#AFAFA9;
+  --pink:#D80A5F;
+  --ember:#B5350F;
+  --gold:#8A6A1E;
+  --shadow:0 2px 4px rgba(18,18,17,.05), 0 24px 60px -36px rgba(18,18,17,.55);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+img{max-width:100%;display:block}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Poppins",system-ui,sans-serif;
+  font-size:16px;line-height:1.72;font-weight:300;
+  -webkit-font-smoothing:antialiased;
+}
+strong{font-weight:600}
+em{font-style:italic}
+.osw{font-family:"Oswald",Impact,sans-serif}
+.hand{font-family:"Caveat",cursive;color:var(--pink);font-weight:600}
+
+.deck{max-width:1180px;margin:0 auto;padding:40px 20px 90px}
+
+/* ---------- SLIDE ---------- */
+.slide{
+  position:relative;
+  background:var(--paper);
+  border-radius:3px;
+  padding:70px 72px;
+  margin-bottom:26px;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+@media (max-width:860px){.slide{padding:46px 30px}}
+@media (max-width:560px){.slide{padding:38px 22px}}
+.slide::before,.slide::after{
+  content:"";position:absolute;height:1px;background:var(--ink);opacity:.55;
+}
+.slide::before{top:34px;left:72px;width:150px}
+.slide::after{bottom:34px;right:72px;width:150px}
+@media (max-width:860px){.slide::before{left:30px;width:90px}.slide::after{right:30px;width:90px}}
+.slide.plain::before,.slide.plain::after{display:none}
+
+.snum{
+  position:absolute;top:28px;right:72px;
+  font-family:"Oswald",sans-serif;font-size:12px;font-weight:400;
+  letter-spacing:.3em;color:var(--ink-3);text-transform:uppercase;
+}
+@media (max-width:860px){.snum{right:30px;top:24px}}
+
+/* ---------- TYPE ---------- */
+.eyebrow{
+  font-family:"Oswald",sans-serif;font-size:12px;font-weight:500;
+  letter-spacing:.42em;text-transform:uppercase;color:var(--ember);
+  margin-bottom:22px;
+}
+h1{
+  font-family:"Oswald",sans-serif;font-weight:700;text-transform:uppercase;
+  font-size:clamp(40px,8.6vw,104px);letter-spacing:.14em;line-height:1;
+}
+h2{
+  font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;
+  font-size:clamp(26px,4vw,46px);letter-spacing:.16em;line-height:1.14;
+  margin-bottom:30px;
+}
+h3{
+  font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;
+  font-size:clamp(17px,2.2vw,23px);letter-spacing:.2em;line-height:1.3;
+  margin-top:46px;margin-bottom:18px;
+}
+h4{
+  font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;
+  font-size:14px;letter-spacing:.2em;color:var(--ink-2);margin-bottom:10px;
+}
+p{max-width:66ch;margin-bottom:18px}
+p:last-child{margin-bottom:0}
+ul,ol{max-width:66ch;margin:0 0 20px 0;padding-left:20px;display:flex;flex-direction:column;gap:10px}
+li::marker{color:var(--ember)}
+.lead{font-size:clamp(17px,2vw,20px);line-height:1.6;font-weight:200;max-width:56ch;color:var(--ink-2)}
+
+/* ---------- COVER ---------- */
+.cover{min-height:min(78vh,620px);display:flex;flex-direction:column;justify-content:center;background:var(--paper-2)}
+.cover h1{margin-bottom:6px}
+.cover .sub{font-family:"Oswald",sans-serif;font-size:clamp(12px,1.8vw,17px);letter-spacing:.34em;text-transform:uppercase;color:var(--ink-2);font-weight:300;text-align:right;max-width:none}
+.cover .meta{margin-top:52px;display:flex;flex-wrap:wrap;gap:6px 34px;font-family:"Oswald",sans-serif;font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3)}
+.cover .meta b{color:var(--ink-2);font-weight:500}
+
+/* ---------- HAND NOTE ---------- */
+.note{
+  position:relative;
+  font-family:"Caveat",cursive;color:var(--pink);font-weight:600;
+  font-size:clamp(19px,2.3vw,25px);line-height:1.35;
+  max-width:34ch;margin:26px 0;transform:rotate(-1.1deg);
+}
+.note.right{margin-left:auto;text-align:right;transform:rotate(1deg)}
+.note svg{position:absolute;width:56px;height:auto;stroke:var(--pink);fill:none;stroke-width:2.2;stroke-linecap:round}
+.note.down svg{bottom:-40px;left:14px}
+.note.right.down svg{bottom:-40px;right:14px;left:auto;transform:scaleX(-1)}
+
+/* ---------- QUOTE ---------- */
+.quote{
+  font-family:"Oswald",sans-serif;font-weight:300;text-transform:uppercase;
+  font-size:clamp(21px,3.3vw,36px);letter-spacing:.09em;line-height:1.32;
+  max-width:22ch;margin:42px 0;color:var(--ink);
+}
+.quote .em{color:var(--ember);font-weight:500}
+.quote cite{display:block;font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.26em;color:var(--ink-3);font-style:normal;margin-top:20px;font-weight:400;text-transform:uppercase}
+
+/* ---------- GRID / CARDS ---------- */
+.grid{display:grid;gap:14px;margin-bottom:24px}
+@media (min-width:760px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--white);border-radius:3px;padding:26px 28px;border-top:2px solid var(--ember)}
+.card h5{font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;font-size:15px;letter-spacing:.13em;margin-bottom:12px;line-height:1.35}
+.card p,.card ul{margin-bottom:0;font-size:15px;line-height:1.65;max-width:none}
+.card ul{gap:8px;padding-left:17px}
+.card.pink{border-top-color:var(--pink)}
+.card.gold{border-top-color:var(--gold)}
+.card.plainb{border-top-color:var(--line)}
+
+/* ---------- BENCH ---------- */
+.bench{margin-bottom:34px}
+.bench .bhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 20px;margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.bench .bname{font-family:"Oswald",sans-serif;font-weight:600;text-transform:uppercase;font-size:clamp(19px,2.6vw,27px);letter-spacing:.13em}
+.bench .bnum{font-family:"Oswald",sans-serif;font-weight:400;font-size:14px;letter-spacing:.14em;color:var(--ember);text-transform:uppercase}
+.bench .bdesc{font-size:14.5px;color:var(--ink-2);max-width:none;margin-bottom:16px;line-height:1.6}
+.bench figure{margin:0;background:var(--white);padding:10px;border-radius:3px}
+.bench img{border-radius:2px;width:100%}
+
+/* ---------- TABLE ---------- */
+.tw{overflow-x:auto;margin-bottom:26px;background:var(--white);border-radius:3px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:14.5px;line-height:1.6}
+th{
+  font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;
+  text-align:left;color:var(--ink-2);font-weight:500;padding:15px 18px;
+  border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:bottom;
+}
+td{padding:14px 18px;border-bottom:1px solid var(--line-soft);vertical-align:top;color:var(--ink-2)}
+tr:last-child td{border-bottom:0}
+td.name,td strong{color:var(--ink)}
+td.name{font-weight:500;min-width:140px}
+td.ep{font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.14em;color:var(--ink-3);white-space:nowrap;width:56px;text-transform:uppercase}
+td.who{font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ember);white-space:nowrap}
+
+/* ---------- QUADRO ---------- */
+.quadro{background:var(--white);border-radius:3px;padding:0;overflow:hidden;margin-bottom:22px}
+.quadro .qh{padding:30px 32px 24px;border-bottom:1px solid var(--line)}
+.quadro .qtag{font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--ember);margin-bottom:12px}
+.quadro .qn{font-family:"Oswald",sans-serif;font-weight:700;text-transform:uppercase;font-size:clamp(24px,3.6vw,40px);letter-spacing:.13em;line-height:1.05;margin-bottom:14px}
+.quadro .qfreq{font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-bottom:16px}
+.quadro .qh p{font-size:15px;line-height:1.68;max-width:70ch;color:var(--ink-2)}
+.quadro .qb{padding:8px 0 0}
+.quadro .qb .tw{margin-bottom:0;border-radius:0}
+.quadro .qb table{min-width:600px}
+.origem{font-family:"Oswald",sans-serif;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding:18px 32px 24px;line-height:1.7;border-top:1px solid var(--line-soft)}
+.origem b{color:var(--pink);font-weight:500}
+
+/* ---------- WEEK ---------- */
+.week{display:grid;gap:12px;margin-bottom:24px}
+@media (min-width:720px){.week{grid-template-columns:repeat(4,1fr)}}
+.day{background:var(--white);border-radius:3px;padding:22px 20px;border-top:2px solid var(--ember)}
+.day .dd{font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.26em;text-transform:uppercase;color:var(--ember);margin-bottom:12px}
+.day .dq{font-family:"Oswald",sans-serif;font-size:16px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;line-height:1.2;margin-bottom:9px}
+.day p{font-size:13.5px;line-height:1.6;margin-bottom:0;max-width:none;color:var(--ink-2)}
+
+/* ---------- SPLIT ---------- */
+.split{display:grid;gap:14px;margin-bottom:24px}
+@media (min-width:760px){.split{grid-template-columns:1fr 1fr}}
+.col{background:var(--white);border-radius:3px;padding:26px 28px;border-left:2px solid var(--line)}
+.col.f{border-left-color:var(--ember)}
+.col.w{border-left-color:var(--pink)}
+.col.o{border-left-color:var(--gold)}
+.col.t{border-left-color:var(--ink-3)}
+.col h5{font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;font-size:15px;letter-spacing:.2em;margin-bottom:16px}
+.col ul{max-width:none;margin-bottom:0;font-size:14.5px;gap:9px;padding-left:17px;line-height:1.6}
+
+.chk{list-style:none;padding-left:0;max-width:none;margin:0;gap:0;border-top:1px solid var(--line)}
+.chk li{display:grid;grid-template-columns:1fr;gap:6px;padding:22px 0;border-bottom:1px solid var(--line-soft)}
+@media (min-width:700px){.chk li{grid-template-columns:34px 1fr;gap:20px;align-items:start}}
+.chk .box{width:22px;height:22px;border:2px solid var(--line);border-radius:3px;position:relative;margin-top:3px;flex:none}
+.chk li.done .box{border-color:var(--ember);background:var(--ember)}
+.chk li.done .box::after{content:"";position:absolute;left:6px;top:2px;width:6px;height:11px;border:solid var(--white);border-width:0 2.4px 2.4px 0;transform:rotate(43deg)}
+.chk .ct{font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;font-size:16px;letter-spacing:.13em;margin-bottom:8px;line-height:1.3}
+.chk li.done .ct{color:var(--ember)}
+.chk .cd{font-size:15px;line-height:1.7;color:var(--ink-2);max-width:66ch}
+.datas{display:grid;gap:12px;grid-template-columns:1fr}
+@media (min-width:640px){.datas{grid-template-columns:1fr 1fr}}
+@media (min-width:980px){.datas{grid-template-columns:1fr 1fr 1fr}}
+.data{display:flex;align-items:center;gap:16px;background:var(--white);border-radius:3px;padding:14px 18px}
+.data .dc{flex:none;width:72px;height:72px;border-radius:50%;border:2px solid var(--ember);display:flex;align-items:center;justify-content:center;text-align:center;font-family:"Oswald",sans-serif;font-weight:500;font-size:15px;letter-spacing:.04em;color:var(--ember);line-height:1.1;padding:6px}
+.data .dc.long{font-size:12px}
+.data .dn{font-size:15px;line-height:1.45;color:var(--ink)}
+.bigline{border-top:1px solid var(--ink);margin:44px 0 0;padding-top:22px}
+.end{text-align:center;padding:80px 30px}
+.end .quote{margin:0 auto;max-width:24ch;text-align:center}
+footer{padding:30px 20px 0;font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-3);line-height:2;text-align:center}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+/* ---------- CORRIDA ---------- */
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin:34px 0 28px}
+@media (min-width:760px){.kpis{grid-template-columns:repeat(5,1fr)}}
+.kpi{background:var(--white);border-radius:3px;padding:20px 18px;border-bottom:2px solid var(--ember)}
+.kn{display:block;font-family:"Oswald",sans-serif;font-weight:600;font-size:clamp(22px,2.6vw,30px);letter-spacing:.06em;line-height:1.1;color:var(--ink)}
+.kl{display:block;font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-3);margin-top:8px}
+.tag.rec{display:inline-block;font-family:"Oswald",sans-serif;font-size:10.5px;letter-spacing:.24em;text-transform:uppercase;background:var(--ember);color:var(--white);padding:4px 10px;border-radius:2px;margin-bottom:14px}
+.col p{font-size:15px;line-height:1.65;max-width:none}
+.col p.small,.small{font-size:13.5px;color:var(--ink-3)}
+.tw.mini{margin:16px 0 0;background:var(--paper-2)}
+.tw.mini table{min-width:0}
+.tw.mini td,.tw.mini th{padding:9px 14px}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.pills span{font-family:"Oswald",sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--ink-2);border-radius:40px;padding:7px 14px;color:var(--ink-2)}
+tr.pick td{background:rgba(181,53,15,.07)}
+tr.pick td.ep{color:var(--ember);font-size:16px}
+.pack{list-style:none;padding:0;max-width:none;gap:0;border-top:1px solid var(--ink)}
+.pack li{display:flex;gap:22px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.pack .pn{font-family:"Oswald",sans-serif;font-weight:700;font-size:clamp(28px,4vw,44px);color:var(--ember);letter-spacing:.04em;line-height:1;flex:none;width:64px}
+.pack b{display:block;font-family:"Oswald",sans-serif;font-weight:500;text-transform:uppercase;letter-spacing:.12em;font-size:clamp(16px,2vw,21px);line-height:1.25}
+.pack span:not(.pn){display:block;font-size:14.5px;color:var(--ink-2);margin-top:4px}
+.phases{display:grid;gap:12px;margin-bottom:20px}
+@media (min-width:900px){.phases{grid-template-columns:repeat(5,1fr)}}
+.ph{background:var(--white);border-radius:3px;padding:22px 20px;border-top:2px solid var(--line)}
+.ph.hot{border-top-color:var(--pink);background:var(--paper-2)}
+.ph .pd{font-family:"Oswald",sans-serif;font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--ember);margin-bottom:6px}
+.ph.hot .pd{color:var(--pink)}
+.ph .pt{font-family:"Oswald",sans-serif;font-weight:600;font-size:20px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.ph ul{font-size:13.5px;line-height:1.55;gap:7px;padding-left:16px;margin:0;max-width:none}
+.chk li{grid-template-columns:34px 1fr}
+.dec{display:grid;gap:12px}
+@media (min-width:760px){.dec{grid-template-columns:1fr 1fr}}
+.d{display:flex;gap:18px;align-items:center;background:var(--white);border-radius:3px;padding:18px 22px}
+.d .dn{flex:none;width:46px;height:46px;border-radius:50%;border:2px solid var(--ember);display:flex;align-items:center;justify-content:center;font-family:"Oswald",sans-serif;font-weight:600;font-size:19px;color:var(--ember)}
+.d p{margin:0;font-size:15.5px;line-height:1.5}
+.end{background:var(--ink);color:var(--white)}
+.end .quote{color:var(--white)}
+.end .quote cite{color:var(--line-soft)}
+.cover .note{margin:34px 0 0 auto}
+</style></head><body>
+<div class="deck">
+
+<!-- CAPA -->
+<section class="slide cover">
+  <div class="eyebrow">Proposta de participação</div>
+  <h1>Ogro na<br>Corrida do<br>Futebol</h1>
+  <p class="sub">Edição Pelé · 14.11.2026 · Maracanã</p>
+  <div class="note right down">corrida de 8K à noite e um food truck da Ogro esperando na chegada. Isso é muito Ogro.
+    <svg viewBox="0 0 60 50"><path d="M5 5 C 25 10, 45 20, 50 42"/><path d="M40 36 L50 43 L54 31"/></svg>
+  </div>
+  <div class="meta">
+    <span><b>Para</b> Ogro Steaks</span>
+    <span><b>Por</b> Seven7</span>
+    <span><b>Parceiro</b> Effect Sport</span>
+    <span><b>Versão</b> outubro 2026</span>
+  </div>
+</section>
+
+<!-- 01 O EVENTO -->
+<section class="slide" id="evento">
+  <span class="snum">01 / O evento</span>
+  <div class="eyebrow">Onde a gente vai estar</div>
+  <h2>Uma corrida noturna dentro do maior estádio do mundo</h2>
+  <p class="lead">A Corrida do Futebol Light chega à edição 2026 em homenagem ao Pelé. A prova acontece na semana do Dia Rei Pelé (19/11), com largada à noite, percurso por dentro do Maracanã e show de luz e som do estádio.</p>
+
+  <div class="kpis">
+    <div class="kpi"><span class="kn">14.11</span><span class="kl">sábado</span></div>
+    <div class="kpi"><span class="kn">16h às 22h30</span><span class="kl">evento no Village</span></div>
+    <div class="kpi"><span class="kn">5 mil</span><span class="kl">atletas</span></div>
+    <div class="kpi"><span class="kn">~10 mil</span><span class="kl">pessoas no Village</span></div>
+    <div class="kpi"><span class="kn">60 a 80</span><span class="kl">convidados na área VIP</span></div>
+  </div>
+
+  <div class="grid g3">
+    <div class="card">
+      <h5>A prova</h5>
+      <ul>
+        <li>Largada às 18h</li>
+        <li>4K e 8K, individual e dupla</li>
+        <li>Corrida kids, de 200m a 900m</li>
+        <li>Percurso nos anéis e no gramado do Maracanã</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h5>O Village</h5>
+      <ul>
+        <li>No Célio de Barros, colado no Maracanã</li>
+        <li>Largada, chegada, food trucks, área VIP e palco no mesmo lugar</li>
+        <li>Show e DJ no pós-prova, até 22h30</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h5>A vitrine</h5>
+      <ul>
+        <li>Parceria com a Globo: promoção antes e depois da prova e flashes ao vivo</li>
+        <li>Influenciadores de corrida e de futebol</li>
+        <li>Narração de Luiz Penido na largada e na chegada</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 02 DOIS CAMINHOS -->
+<section class="slide" id="formatos">
+  <span class="snum">02 / Formatos</span>
+  <div class="eyebrow">Como a Ogro pode entrar</div>
+  <h2>Dois caminhos na mesa</h2>
+
+  <div class="split">
+    <div class="col f">
+      <div class="tag rec">Nossa recomendação</div>
+      <h5>Formato 1 · Permuta</h5>
+      <p>A Ogro serve a área VIP com <strong>cerca de 180 burgers</strong> para uns 80 convidados. Em troca, recebe exposição de marca, ativação nos kits e um <strong>food truck vendendo no Village com retenção de só 15%</strong> sobre o bruto (o padrão do evento é 40%).</p>
+      <p class="small">Investimento em produto, não em dinheiro. E o truck traz venda de volta no mesmo dia.</p>
+    </div>
+    <div class="col t">
+      <h5>Formato 2 · Patrocínio</h5>
+      <p>Aporte financeiro por cota, com exposição maior na estrutura do evento, camisa, medalha e número de peito conforme o nível. Também dá para montar uma cota personalizada.</p>
+      <div class="tw mini">
+        <table>
+          <tr><th>Cota</th><th>Investimento</th></tr>
+          <tr><td class="name">Naming</td><td>Vendido (Light)</td></tr>
+          <tr><td class="name">Presenting</td><td>R$ 1 milhão</td></tr>
+          <tr><td class="name">Ouro</td><td>R$ 500 mil</td></tr>
+          <tr><td class="name">Prata</td><td>R$ 300 mil</td></tr>
+          <tr><td class="name">Bronze</td><td>R$ 150 mil</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="note down">A cota Bronze leva 10% do espaço do naming nos painéis. A permuta já coloca a Ogro no pódio, na locução e no kit de 5 mil atletas.
+    <svg viewBox="0 0 60 50"><path d="M5 5 C 25 10, 45 20, 50 42"/><path d="M40 36 L50 43 L54 31"/></svg>
+  </div>
+</section>
+
+<!-- 03 O QUE A OGRO GANHA -->
+<section class="slide" id="ganhos">
+  <span class="snum">03 / O que a Ogro ganha</span>
+  <div class="eyebrow">Contrapartidas da permuta</div>
+  <h2>O que volta pra Ogro</h2>
+
+  <div class="grid g2">
+    <div class="card">
+      <h5>💰 Venda</h5>
+      <ul>
+        <li><strong>Food truck no Village</strong>, aberto ao público, das 16h às 22h30</li>
+        <li>Retenção de <strong>15% sobre o bruto</strong>, condição especial de parceiro</li>
+        <li>Operado pelo franqueado de eventos da Ogro</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h5>🏟️ Na arena</h5>
+      <ul>
+        <li><strong>Backdrop de premiação</strong>: a marca aparece em toda foto de pódio</li>
+        <li><strong>Locução</strong> da marca durante o evento</li>
+        <li>Credencial da equipe para circular entre VIP e truck</li>
+      </ul>
+    </div>
+    <div class="card pink">
+      <h5>🎒 Nos kits</h5>
+      <ul>
+        <li><strong>Ativação no kit atleta</strong>, entregue aos corredores</li>
+        <li><strong>Ativação no kit premiação</strong>, para quem sobe no pódio</li>
+      </ul>
+    </div>
+    <div class="card pink">
+      <h5>📱 No digital</h5>
+      <ul>
+        <li>Presença na cartela digital de marcas apoiadoras</li>
+        <li>Aparições na cobertura oficial (posts, stories e live)</li>
+        <li>Post de agradecimento às marcas no pós-evento</li>
+        <li><strong>Pacote de fotos com direito de uso de imagem</strong></li>
+      </ul>
+    </div>
+    <div class="card gold">
+      <h5>🤝 Relacionamento</h5>
+      <ul>
+        <li>Degustação para <strong>60 a 80 convidados VIP</strong>: influenciadores, imprensa, parceiros e atletas premiados</li>
+        <li>4 ingressos de cortesia para a corrida</li>
+        <li>Cupom de 10% de desconto na inscrição para clientes da Ogro</li>
+      </ul>
+    </div>
+    <div class="card plainb">
+      <h5>Fica fora da permuta</h5>
+      <ul>
+        <li>Camisa de atleta, medalha e número de peito</li>
+        <li>Pórticos, lonas e site do evento</li>
+        <li>Conteúdo com os embaixadores digitais da prova (negociado à parte)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 04 O QUE A OGRO ENTREGA -->
+<section class="slide" id="entrega">
+  <span class="snum">04 / A nossa parte</span>
+  <div class="eyebrow">O que a Ogro leva</div>
+  <h2>Duas operações, um evento</h2>
+
+  <div class="split">
+    <div class="col w">
+      <h5>Área VIP · degustação</h5>
+      <ul>
+        <li>Cerca de <strong>180 burgers</strong>, servidos das 16h30 às 22h</li>
+        <li>Formato a definir: inteiro ou meia porção, para o convidado provar sem pesar</li>
+        <li>Sem cozinha no local: operação compacta, com o mínimo de preparo na hora</li>
+        <li>Reposição de hora em hora, como fizemos na Copa Rio</li>
+      </ul>
+    </div>
+    <div class="col f">
+      <h5>Village · food truck de venda</h5>
+      <ul>
+        <li>Truck do franqueado de eventos (próprio ou alugado)</li>
+        <li>Food truck é o formato exigido pela Effect, por alvará e vigilância sanitária</li>
+        <li>Cardápio enxuto, pensado para quem acabou de correr</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>A Effect pediu da Ogro</h3>
+  <div class="pills">
+    <span>Energia elétrica</span><span>Ponto de água</span><span>Mobiliário</span><span>Refrigeração e armazenamento</span><span>Equipamentos</span><span>Tamanho da equipe</span>
+  </div>
+
+  <div class="note right down">Burger parado seis horas não fica bom. O segredo é finalizar perto e repor sempre.
+    <svg viewBox="0 0 60 50"><path d="M5 5 C 25 10, 45 20, 50 42"/><path d="M40 36 L50 43 L54 31"/></svg>
+  </div>
+</section>
+
+<!-- 05 BRINDES -->
+<section class="slide" id="brindes">
+  <span class="snum">05 / Brindes</span>
+  <div class="eyebrow">Proposta Seven7</div>
+  <h2>O que a pessoa leva pra casa</h2>
+  <p class="lead">Brinde bom é o que faz a pessoa pedir Ogro depois. Por isso, quase tudo carrega um cupom.</p>
+
+  <div class="quadro">
+    <div class="qh">
+      <div class="qtag">Kit atleta</div>
+      <div class="qn">Para os 5 mil corredores</div>
+      <p>Precisa ser leve, barato e caber no kit. Quantidade e formato a confirmar com a Effect.</p>
+    </div>
+    <div class="qb"><div class="tw"><table>
+      <tr><th></th><th>Opção</th><th>Como funciona</th><th>Por quê</th></tr>
+      <tr class="pick"><td class="ep">★</td><td class="name">Cartão com cupom</td><td>Cartão da Ogro com cupom para o primeiro pedido depois da prova</td><td>O mais barato e o único que mede retorno</td></tr>
+      <tr><td class="ep">02</td><td class="name">Adesivo com cupom no verso</td><td>Adesivo da marca para garrafa ou notebook</td><td>Fica mais tempo com a pessoa do que um flyer</td></tr>
+      <tr><td class="ep">03</td><td class="name">Mimo comestível</td><td>Item pequeno e embalado, sem preparo</td><td>Lembrança gostosa, depende de liberação sanitária</td></tr>
+    </table></div></div>
+  </div>
+
+  <div class="quadro">
+    <div class="qh">
+      <div class="qtag">Kit premiação</div>
+      <div class="qn">Para quem sobe no pódio</div>
+      <p>Pouca gente, prêmio grande. É aqui que o exagero da Ogro aparece.</p>
+    </div>
+    <div class="qb"><div class="tw"><table>
+      <tr><th></th><th>Opção</th><th>Como funciona</th><th>Por quê</th></tr>
+      <tr class="pick"><td class="ep">★</td><td class="name">Um mês de Ogro</td><td>4 pedidos do burger favorito, entregues em casa</td><td>Mesma mecânica do professor mais fiel, já testada em outubro</td></tr>
+      <tr><td class="ep">02</td><td class="name">Ogro em dobro</td><td>Vale de combo família para dividir com quem torceu</td><td>Leva a marca pra mesa de casa</td></tr>
+      <tr><td class="ep">03</td><td class="name">Peça assinada pelo Jimmy</td><td>Avental ou boné com autógrafo</td><td>Exclusivo e vira conteúdo</td></tr>
+    </table></div></div>
+  </div>
+
+  <div class="quadro">
+    <div class="qh">
+      <div class="qtag">Área VIP</div>
+      <div class="qn">Para quem tem audiência</div>
+      <p>Influenciadores, imprensa e parceiros. Tudo pensado para ser fotografado.</p>
+    </div>
+    <div class="qb"><div class="tw"><table>
+      <tr><th></th><th>Opção</th><th>Como funciona</th><th>Por quê</th></tr>
+      <tr class="pick"><td class="ep">★</td><td class="name">Embalagem da edição</td><td>Burger servido em embalagem especial do evento</td><td>A foto do burger já sai com a marca</td></tr>
+      <tr><td class="ep">02</td><td class="name">Cartão VIP</td><td>Cupom forte para o primeiro pedido em casa</td><td>Tira o convidado do evento e leva pro delivery</td></tr>
+      <tr><td class="ep">03</td><td class="name">Boné ou copo da Ogro</td><td>Para quem postar no stories</td><td>Mídia espontânea com a marca no rosto</td></tr>
+    </table></div></div>
+  </div>
+</section>
+
+<!-- 06 ATIVAÇÕES -->
+<section class="slide" id="ativacoes">
+  <span class="snum">06 / Ativações</span>
+  <div class="eyebrow">E o que mais dá pra fazer</div>
+  <h2>Muito além do burger</h2>
+
+  <div class="grid g2">
+    <div class="card">
+      <h5>No food truck</h5>
+      <ul>
+        <li><strong>Mostrou a medalha, ganhou:</strong> mimo ou desconto para quem terminou a prova</li>
+        <li><strong>Roleta premiada</strong> de mão, com prêmio na hora ou cupom para casa</li>
+        <li><strong>Combo da corrida:</strong> um combo do evento, pensado para a fome do pós-prova</li>
+        <li><strong>Desafio Ogro:</strong> encarar o burger mais exagerado da casa e levar brinde</li>
+      </ul>
+    </div>
+    <div class="card pink">
+      <h5>Na área VIP</h5>
+      <ul>
+        <li><strong>Jimmy na chapa:</strong> o chef da Ogro finalizando e servindo os convidados</li>
+        <li><strong>Ogro Responde ao vivo:</strong> convidados e atletas respondendo as perguntas do quadro</li>
+      </ul>
+    </div>
+    <div class="card gold">
+      <h5>Conteúdo</h5>
+      <ul>
+        <li><strong>Igor corre a prova vestido de Ogro</strong></li>
+        <li>Episódio do <strong>Já deu por hoje</strong>: corredor no fim da prova, comendo sem culpa</li>
+        <li>Bastidor do truck: montagem, fila e chapa à noite</li>
+        <li>Collab com influenciadores de corrida convidados para a VIP</li>
+      </ul>
+    </div>
+    <div class="card plainb">
+      <h5>Antes e depois</h5>
+      <ul>
+        <li><strong>Sorteio das 4 cortesias</strong> no Instagram: marque quem corre com você</li>
+        <li>Cupom de 10% na inscrição enviado para a base de clientes</li>
+        <li>Pós-evento com as fotos oficiais e um cupom de recuperação com prazo</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PACOTE -->
+<section class="slide" id="pacote">
+  <span class="snum">07 / Recomendação</span>
+  <div class="eyebrow">Se fosse pra escolher hoje</div>
+  <h2>O pacote enxuto</h2>
+  <p class="lead">Seis ações que cabem no prazo, medem retorno e têm a cara da Ogro.</p>
+
+  <ol class="pack">
+    <li><span class="pn">01</span><div><b>Cartão com cupom no kit atleta</b><span>Alcance de 5 mil corredores, com retorno medido</span></div></li>
+    <li><span class="pn">02</span><div><b>Um mês de Ogro no kit premiação</b><span>O prêmio exagerado que vira história</span></div></li>
+    <li><span class="pn">03</span><div><b>Embalagem da edição na VIP</b><span>Toda foto de convidado sai com a marca</span></div></li>
+    <li><span class="pn">04</span><div><b>Mostrou a medalha, ganhou</b><span>Puxa o corredor direto pro truck</span></div></li>
+    <li><span class="pn">05</span><div><b>Igor corre vestido de Ogro</b><span>O conteúdo com mais chance de viralizar</span></div></li>
+    <li><span class="pn">06</span><div><b>Sorteio das cortesias</b><span>Alcance e seguidores antes do evento</span></div></li>
+  </ol>
+</section>
+
+<!-- 08 PRÓXIMOS PASSOS -->
+<section class="slide" id="passos">
+  <span class="snum">08 / Próximos passos</span>
+  <div class="eyebrow">Daqui até a largada</div>
+  <h2>19 dias para fazer acontecer</h2>
+
+  <div class="phases">
+    <div class="ph"><div class="pd">até 29.10</div><div class="pt">Fechar</div>
+      <ul>
+        <li>Aprovação do formato permuta</li>
+        <li>Aceite à Effect, com o logo em vetor</li>
+        <li>Lista técnica da operação para a Effect</li>
+        <li>Truck do franqueado de eventos confirmado</li>
+      </ul>
+    </div>
+    <div class="ph"><div class="pd">30.10 a 07.11</div><div class="pt">Produzir</div>
+      <ul>
+        <li>Sabor e formato dos burgers da VIP</li>
+        <li>Cardápio, combo e preços do truck</li>
+        <li>Brindes escolhidos e na gráfica</li>
+        <li>Cupons criados</li>
+        <li>Artes do truck, do cupom e de divulgação</li>
+      </ul>
+    </div>
+    <div class="ph"><div class="pd">04 a 13.11</div><div class="pt">Aquecer</div>
+      <ul>
+        <li>Anúncio da parceria no Instagram</li>
+        <li>Sorteio das cortesias</li>
+        <li>Nomes para as credenciais</li>
+        <li>Plano de reposição de hora em hora</li>
+        <li>Brindes entregues para os kits</li>
+      </ul>
+    </div>
+    <div class="ph hot"><div class="pd">14.11</div><div class="pt">Dia D</div>
+      <ul>
+        <li>VIP das 16h30 às 22h</li>
+        <li>Truck das 16h às 22h30</li>
+        <li>Captação de conteúdo em todo o Village</li>
+      </ul>
+    </div>
+    <div class="ph"><div class="pd">até 21.11</div><div class="pt">Colher</div>
+      <ul>
+        <li>Post com as fotos oficiais</li>
+        <li>Resultado: venda do truck, uso dos cupons e alcance</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>A confirmar com a Effect</h3>
+  <ul class="chk">
+    <li><span class="box"></span><div><div class="ct">Kit atleta</div><div class="cd">O que pode entrar (impresso ou brinde físico), quantos kits e até quando entregar o material.</div></div></li>
+    <li><span class="box"></span><div><div class="ct">Kit premiação</div><div class="cd">Quantos premiados e que tipo de item cabe.</div></div></li>
+    <li><span class="box"></span><div><div class="ct">Planta do Village</div><div class="cd">Posição do truck, espaço de apoio e ponto de energia na área VIP.</div></div></li>
+    <li><span class="box"></span><div><div class="ct">Comunicação</div><div class="cd">Uso do nome da corrida nas peças da Ogro e divulgação conjunta com a nossa assessoria de imprensa.</div></div></li>
+  </ul>
+</section>
+
+<!-- 09 DECISÕES -->
+<section class="slide" id="decisoes">
+  <span class="snum">09 / Para aprovar</span>
+  <div class="eyebrow">O que precisamos de vocês</div>
+  <h2>Cinco decisões para destravar</h2>
+  <div class="dec">
+    <div class="d"><span class="dn">1</span><p>Seguimos com a <strong>permuta</strong>?</p></div>
+    <div class="d"><span class="dn">2</span><p>Quais <strong>brindes e ativações</strong> entram (o pacote enxuto ou outra combinação)?</p></div>
+    <div class="d"><span class="dn">3</span><p>Qual <strong>burger</strong> vai para a VIP, e em que formato?</p></div>
+    <div class="d"><span class="dn">4</span><p>Qual o <strong>cardápio e o combo</strong> do truck, e qual <strong>cupom</strong> vai no kit?</p></div>
+    <div class="d"><span class="dn">5</span><p>O <strong>Jimmy</strong> e o <strong>Igor</strong> podem estar no evento?</p></div>
+  </div>
+</section>
+
+<!-- FIM -->
+<section class="slide end plain">
+  <p class="quote">A corrida acaba às 22h30. <span class="em">A fome, não.</span><cite>Ogro Steaks · Corrida do Futebol 2026</cite></p>
+</section>
+
+<footer>Seven7 para Ogro Steaks · Corrida do Futebol Light 2026 · Proposta com base no material da Effect Sport</footer>
+</div>
+</body></html>
